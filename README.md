@@ -1,92 +1,87 @@
-Movie Review Sentiment Classification
-Project Overview
+💬 Movie Review Sentiment Classification
+📌 Overview
 
-This project performs sentiment analysis on movie reviews using the IMDb dataset. The objective is to build machine learning models capable of classifying reviews as positive or negative based on textual content.
+This project performs sentiment analysis on movie reviews using the IMDb dataset. The goal is to classify reviews as positive or negative based on their textual content using machine learning and deep learning models.
 
-Dataset Details
+📂 Dataset
 
-The dataset contains 50,000 labeled movie reviews, evenly split:
+The dataset consists of 50,000 movie reviews, equally divided into:
 
-Sentiment	Samples
-Positive	25,000
-Negative	25,000
+Positive reviews → 25,000
+Negative reviews → 25,000
 
-Source: IMDb Movie Reviews Dataset (Kaggle)
+Each review is labeled to indicate its sentiment.
 
-Data Cleaning & Preprocessing
+❓ Why Sentiment Analysis?
 
-To improve model performance, the text data is cleaned and normalized through several steps:
+Understanding user opinions from text data is important for:
 
-Removing HTML tags and unwanted symbols
-Eliminating common stopwords
-Filtering out single-character noise
-Normalizing extra whitespace
+Customer feedback analysis
+Product and movie reviews
+Social media monitoring
+Decision-making systems
+⚙️ Data Preprocessing
 
-These steps help in reducing noise and improving feature quality.
+To improve model performance, the text data undergoes:
 
-Text Representation
-Tokenization
-
-Text is converted into sequences of integers using a tokenizer. Each word is mapped to a unique index.
-
-Padding
-
-Since reviews vary in length, sequences are padded to a fixed size (e.g., 100 words) to ensure uniform input for models.
-
-Word Embeddings (GloVe)
-
-Pre-trained GloVe embeddings are used to represent words as dense vectors. This allows the model to:
-
-Understand semantic relationships
-Improve generalization
-Capture contextual meaning
-Models Implemented
-
-Three different models are used to compare performance:
-
-1. Feedforward Neural Network
-Basic dense layers
-Fast but less effective for sequence data
+Removal of HTML tags and special characters
+Stopword removal
+Elimination of single-character noise
+Normalization of whitespace
+🧠 Text Representation
+1. Tokenization
+Converts text into sequences of numbers
+Assigns a unique index to each word
+2. Padding
+Ensures all sequences have the same length
+Maintains uniform input size
+3. Word Embeddings (GloVe)
+Uses pre-trained embeddings
+Captures semantic meaning of words
+Improves model accuracy
+🤖 Models Implemented
+1. Feedforward Neural Network (FNN)
+Uses dense layers
+Fast but less effective for sequential data
 2. Convolutional Neural Network (CNN)
-Uses 1D convolution layers
-Captures local text patterns and phrases
+Captures local patterns in text
+Identifies important phrases
 3. Long Short-Term Memory (LSTM)
 Handles sequential dependencies
-Best suited for understanding context in sentences
-Training & Results
-Models are trained for 10 epochs
-Performance is evaluated using accuracy
+Best for understanding context in text
+📊 Training & Results
+Models trained for 10 epochs
+Performance evaluated using accuracy
 
 👉 Observation:
-The LSTM model achieves the highest accuracy due to its ability to capture long-term dependencies in text.
+LSTM achieved the highest accuracy due to its ability to capture long-term dependencies in text.
 
-Requirements
-
-Install the following libraries before running the project:
-
-Python 3.x
+🛠️ Technologies Used
+Python
 NumPy
 Pandas
 NLTK
 TensorFlow
 Keras
 Scikit-learn
-
-Also, download GloVe embeddings from the official source.
-
-How to Run
+💾 How to Run
+Clone the repository
 git clone <repository-link>
+Navigate to project folder
 cd project-folder
+Install dependencies
 pip install -r requirements.txt
+Run the project
 python main.py
-Future Improvements
-Use Transformer models (like BERT)
+🎯 Applications
+Movie and product review analysis
+Social media sentiment tracking
+Customer feedback systems
+Opinion mining
+🔮 Future Improvements
+Use advanced models like BERT / Transformers
 Hyperparameter tuning
-Add more evaluation metrics (F1-score, Precision, Recall)
-License
+Add evaluation metrics (F1-score, Precision, Recall)
+📜 License
 
-This project is licensed under the MIT License.
-
-Contributions
-
-Contributions are welcome! Feel free to fork the repo and submit a pull request.
+This project is licensed under the MIT License
